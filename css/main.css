@@ -41,55 +41,78 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/*END OF RESET*/
+
+/*CLEAR*/
+.group{
+	clear:both;
+	*zoom:1;
+}
+
+.group:before,
+.group:after{
+	content:"";
+	display:table;
+}
+
+.group:after{clear:both;}
 
 
 /*NEW STYLES*/
 body{
-	color:black; 
-	background:gray;
+	background-color: #29425B;
 	font-family:Helvetica;
-	width:500px;
-	margin:auto;
-
+	color:white;
 }
+
 header{
-	color:blue;
-	text-align:center;
-	font-size:50px;
-	font-weight:bolder;
-}
-nav{
-	text-align:center;
+	height:100px;
+	border-bottom:1px solid white;
 }
 
+nav{
+	display:block;
+}
+
+article{
+	padding:20px 0px;
+}
+
+h1,h2,h3,h4,h5,h6{
+	color:white;
+	font-family:Helvetica, sans-serif;
+	text-shadow: 1px 3px 1px black;
+}
 
 h1{
-	color:blue;
-	font-size: 30px;
-	font-weight: bolder;
-	padding: 10px 20px;
-}
-h2{
-	padding:5px 30px 0px 30px;
-	font-size:20px;
-	font-weight:bold;
+	font-size: 50px;
 }
 
+h2{
+
+	font-size:80px;
+	font-weight:bolder;
+	letter-spacing:-5px;
+}
+
+h3{
+	font-size:48px;
+	padding:20px 0px 10px 20px;
+}
+
+h4{
+	font-size:36px;
+	padding:10px 0px 10px 40px;
+}
 
 p{
 	padding:0px 60px;
 	font-size:17px;
+	text-indent:20px;
+	line-height:1.5;
 }
 
 
-ul{
-	padding:0px 60px;
-	font-size:17px;
-}
-dl{
-	padding:0px 40px;
-}
+
 dd{
 	display: block; /*Why doesn't this do anything*/
 	padding: 0px 20px;
@@ -103,19 +126,201 @@ b{
 	font-weight:bolder;
 }
 
-p + p{
-	text-indent:20px;
+
+
+/*CLASSES and IDS*/
+.wrapper{
+	width:960px;
+	margin:0 auto;
+	background-color: #697B8C;
+	border-left:1px solid white;
+	border-right:1px solid white;
 }
 
-.info{
+.container{
+	margin:0 auto;
+	width: 960px;
+}
+
+
+
+/*PRIMARY HEADING AND NAV*/
+.primary-logo{
+	float:left;
+	line-height:2.5;
+	margin:0;
+	vertical-align:baseline;
+	background-color:blue;
+	height:100px;
+	width:290px;
+	padding-left:10px;
+	letter-spacing:-5px;
+	text-shadow: 
+		1px 3px 1px #292929,
+		2px 4px 2px white;
+}
+
+.primary-nav{
+	background-color:blue;
+	width:650px;
+	float:left;
+	font-size:20px;
+	text-align:right;
+	padding:5px 10px 5px 0px;
+}
+
+.primary-nav a{
+	color:white;
+	text-decoration: none;
+}
+
+.primary-nav li{
+	display:inline;
+	padding-right:20px;
+}
+
+.primary-nav a:hover{
+	text-decoration:underline;
+	color: black;
+	font-weight:bolder;
+}
+
+.filler1{
+	float:left;
+	height:68px;
+	width:658px;
+	border-left:1px solid white;
+	border-bottom:1px solid white;
+}
+/*END OF PRIMARY HEADER AND NAV*/
+
+
+
+
+
+
+/**********SECONDARY HEADER**********/
+.secondary-header{
+	height:300px;
+	background-color:#697B8C;
+	border-bottom:1px solid white;
+}
+
+.secondary-title{
+	line-height:6.5;
+	float:left;
+	margin:0;
+	background-color: #697B8C;
+	width:230px;
+	height:300px;
+	padding-left:10px;
+}
+
+.secondary-picture{
+	float:right;
+	margin:0;
+	background:#697B8C;
+	width:720px;
+	height:300px;
+	overflow:hidden;
+}
+
+/**********HOME page specifics**********/
+.home .secondary-picture{
+	width: 620px;
+	float:right;
+}
+
+.journal .secondary-picture{
+	width:700px;
+	float:right;
+}
+
+/*ABOUT page specifics*/
+.about .secondary-picture{
+	width:300px;
+}
+
+.about .secondary-title{
+	width:650px;
+	height:290px;
+	background-color:#697B8C;
+}
+
+.about .secondary-picture img{
+	border-radius:200px;
+	width: 250px;
+	margin-right:50px;
+	margin-top:10px;
+	vertical-align:center;
+}
+
+.about li{
+	color:white;
+	padding:0px 0px 0px 40px;
+}
+
+.about dl{
+	color:white;
+	padding:0px 40px;
+}
+
+/*.secondary-header .col3-4{
+	display:inline-block;
+	float:left;
+	background-color:green;
+	width:300px;
+}*/
+
+/*.list-compact{
+	list-style:none;*/
+}
+/*what does this do??*/
+
+
+
+
+.col1-4{
+	float:left;
+	width:240px;
+	background-color:red;
+}
+
+.col3-4{
+	float:left;
+	width:100px;
+	background-color:red;
+}
+
+/*.info{
 	padding:0px 0px 0px 30px;
+}*/
+
+
+
+
+
+/*UNUSED*/
+/*
+.primary-header{
+	border-bottom: 2px solid gray;
+	vertical-align:baseline;
+	display:block;
+	margin-bottom:0px;
+	padding:5px 0px;
 }
 
-#profile{
-	text-align:center;
-}
 
 #contact{
 	border:medium;
 	border-color:white;}
 	/*Why isn't this being picked up?*/
+
+
+/*.primary-nav li{
+	float:right;
+	margin:60px 10px;
+	background-color:blue;
+	color:white;
+}*/
+*/
